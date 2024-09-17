@@ -1,8 +1,13 @@
+import json
+
 from PySide6.QtCore import QObject,Qt
-from PySide6.QtWidgets import QMainWindow, QMenu, QComboBox, QCheckBox, QApplication, QWidget, QHBoxLayout
+from PySide6.QtWidgets import QMainWindow, QMenu, QComboBox, QCheckBox, QApplication, QWidget, QHBoxLayout, \
+    QTableWidgetItem
 from Ui_MainCtl_Ui import Ui_MainWindow
-from modules.db.track_data import TrackData
+from modules.db.plan_db import PlanDb
+from modules.db.track_db import TrackDb
 from modules.tcp.tcp_server import TcpServer
+
 
 class CenteredWidget(QWidget):
     def __init__(self, widget, parent=None):
@@ -14,11 +19,17 @@ class CenteredWidget(QWidget):
         layout.addWidget(widget)
         self.setLayout(layout)
 
+#  初始化数据库
+def initDB():
+    PlanDb.createDB()
+    TrackDb.createDB()
+
 class MasterWindow(QMainWindow):
+
     def __init__(self):
         super().__init__()
-        self.tcpServer = None
-        TrackData.createDB()
+        self.worker_thread = None
+        self.tcpServer = TcpServer()
         self.menu = None
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
@@ -26,25 +37,43 @@ class MasterWindow(QMainWindow):
         self.bind()
 
     def initUi(self):
+        self.planboBoxInit()
         self.tableInit()
+
 
     def bind(self):
         self.ui.pushButton_fsave.clicked.connect(self.fsaveAction)
         self.ui.checkBox_selectall.stateChanged.connect(self.checkBoxAllAction)
-        self.tcpServer = TcpServer()
+
+    #  初始化方案，并初始化列表数据
+    def planboBoxInit(self):
+        global sport_tables
+        planList:list = PlanDb.findAll()
+        if planList and len(planList):
+            plan_id = planList[0][0]
+            for item in planList:
+                if item[2]==1:
+                    plan_id = item[2]
+                self.ui.comboBox_plan.addItem(item[1],item[0])
+            trackList =  TrackDb.findByPlan(plan_id)
+            for temp in trackList:
+                sport_tables.append({temp[1],temp[2],temp[3],temp[4],temp[5],temp[6],temp[7],temp[8],temp[9],temp[10]})
+        else:
+            for _ in range(20):
+                sport_tables.append({1:"",2:"直线",3:"",4:"",5:"",6:"",7:"",8:"",9:"",10:"",11:"",12:""})
+
 
     # # tcp server 发送消息
     # def send_message(self,message):
     #     self.tcpServer.broadcast_message(message)
+    #  全选项
     def checkBoxAllAction(self,state):
         flag = False
         if state==2:
             flag = True
         for row in range(self.ui.tableWidget_Step.rowCount()):
-            centered_widget = self.ui.tableWidget_Step.cellWidget(row, 0)  # Get the checkbox in the first column
-            if centered_widget:
-                checkbox = centered_widget.layout().itemAt(0).widget()
-                checkbox.setChecked(flag)
+            checkbox = self.ui.tableWidget_Step.cellWidget(row, 0)  # Get the checkbox in the first column
+            checkbox.setChecked(flag)
 
 
     # 保存表格的信息
@@ -53,24 +82,31 @@ class MasterWindow(QMainWindow):
 
     # tableWidget 添加右键按钮
     def tableInit(self):
-        self.ui.tableWidget_Step.setRowCount(20)
-        for i in range(self.ui.tableWidget_Step.columnCount()):
-            if i==0 or i==1:
-                self.ui.tableWidget_Step.setColumnWidth(i, 40)
-            if i == 2:
-                self.ui.tableWidget_Step.setColumnWidth(i, 60)
-            if i >= 8:
-                self.ui.tableWidget_Step.setColumnWidth(i, 60)
-        for row in range(self.ui.tableWidget_Step.rowCount()):
-            comboBox = QComboBox()
-            comboBox.addItems(["直线", "圆弧"])
-            checkBox = QCheckBox()
-            checkbox_widget = CenteredWidget(checkBox)
-            combobox_widget = CenteredWidget(comboBox)
-            self.ui.tableWidget_Step.setCellWidget(row, 0, checkbox_widget)
-            self.ui.tableWidget_Step.setCellWidget(row, 2, combobox_widget)
+        global sport_tables
+        for index,item in enumerate(sport_tables):
+            self.ui.tableWidget_Step.setRowCount(index + 1)
+            if index==0 or index==1:
+                self.ui.tableWidget_Step.setColumnWidth(index, 40)
+            if index == 2:
+                self.ui.tableWidget_Step.setColumnWidth(index, 60)
+            if index >= 8:
+                self.ui.tableWidget_Step.setColumnWidth(index, 60)
+            cb = QCheckBox()
+            cb.setStyleSheet('QCheckBox{margin:12px };')
+            self.ui.tableWidget_Step.setCellWidget(index, 0, cb)
+            for key, value in item.items():
+                val = QTableWidgetItem(str(value))
+                val.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+                self.ui.tableWidget_Step.setItem(index, key, val)
         self.ui.tableWidget_Step.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.ui.tableWidget_Step.customContextMenuRequested.connect(self.onCustomRequested)
+        self.ui.tableWidget_Step.cellChanged.connect(self.handle_item_changed)
+
+    # 表格更新的同步表数据
+    def handle_item_changed(self,row,column):
+        global sport_tables
+        item = self.ui.tableWidget_Step.item(row, column)
+        sport_tables[row][column] = item.text()
 
     # 监听右键点击事件
     def onCustomRequested(self,pos):
@@ -115,28 +151,36 @@ class MasterWindow(QMainWindow):
         pass
     # 运行
     def runActionTriggered(self):
+        global sport_tables
         # 选中行的数据
         row_list = []
         # 循环行
         for row in range(self.ui.tableWidget_Step.rowCount()):
-            centered_widget = self.ui.tableWidget_Step.cellWidget(row, 0)  # Get the checkbox in the first column
-            checkbox = centered_widget.layout().itemAt(0).widget()
+            checkbox = self.ui.tableWidget_Step.cellWidget(row, 0)  # Get the checkbox in the first column
             if checkbox.isChecked():
-                row_data={}
-                for col in range(self.ui.tableWidget_Step.columnCount()):
-                    item = self.ui.tableWidget_Step.item(row, col)
-                    temp = None
-                    if col == 2:
-                        temp = self.ui.tableWidget_Step.cellWidget(row, col).layout().itemAt(0).widget().currentText()
-                    else:
-                        temp =  item.text() if item else None
-                    row_data[col + 1] = temp
-                row_list.append(row_data)
-        # 发送socket
-        for item in row_list:
-            self.tcpServer.broadcast_message("")
+                dict_map = sport_tables[row]
+                row_list.append(dict_map)
+        if len(row_list)>0:
+            # 发送socket
+            for item in row_list:
+                print(item[3] , item[4] , item[5] , item[6] , item[7] , item[8] , item[9] , item[10])
+                if item[3] and item[4] and item[5] and item[6] and item[7] and item[8] and item[9] and item[10]:
+                    obj = json.dumps({
+                        "type": "GAS_CRD",
+                        "message": "%s|%s|%s|%s|%s|%s|%s|%s" % (
+                        item[3], item[4], item[5], item[6], item[7], item[8], item[9], item[10])
+                    })
+                    self.tcpServer.broadcast_message(obj)
+                if item[12] !="":
+                    self.tcpServer.broadcast_message(json.dumps({
+                        "type": "GAS_IO",
+                        "message": "%s|%s" % ("1", item[12])
+                    }))
+
 
 if __name__ == '__main__':
+    sport_tables = []
+    initDB()
     app = QApplication([])
     window = MasterWindow()
     window.show()

@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1269, 946)
+        MainWindow.resize(1355, 946)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout_2 = QGridLayout(self.centralwidget)
@@ -742,11 +742,28 @@ class Ui_MainWindow(object):
 
         self.gridLayout_13.addWidget(self.comboBox_plan, 0, 2, 1, 1)
 
+        self.pushButton_rename = QPushButton(self.frame_13)
+        self.pushButton_rename.setObjectName(u"pushButton_rename")
+        self.pushButton_rename.setFont(font1)
+
+        self.gridLayout_13.addWidget(self.pushButton_rename, 0, 6, 1, 1)
+
         self.label_22 = QLabel(self.frame_13)
         self.label_22.setObjectName(u"label_22")
         self.label_22.setFont(font1)
 
         self.gridLayout_13.addWidget(self.label_22, 0, 1, 1, 1)
+
+        self.checkBox_selectall = QCheckBox(self.frame_13)
+        self.checkBox_selectall.setObjectName(u"checkBox_selectall")
+
+        self.gridLayout_13.addWidget(self.checkBox_selectall, 0, 0, 1, 1)
+
+        self.label_23 = QLabel(self.frame_13)
+        self.label_23.setObjectName(u"label_23")
+        self.label_23.setFont(font1)
+
+        self.gridLayout_13.addWidget(self.label_23, 0, 4, 1, 1)
 
         self.pushButton_fsave = QPushButton(self.frame_13)
         self.pushButton_fsave.setObjectName(u"pushButton_fsave")
@@ -758,32 +775,7 @@ class Ui_MainWindow(object):
         self.lineEdit_rename = QLineEdit(self.frame_13)
         self.lineEdit_rename.setObjectName(u"lineEdit_rename")
 
-        self.gridLayout_13.addWidget(self.lineEdit_rename, 0, 6, 1, 1)
-
-        self.frame_14 = QFrame(self.frame_13)
-        self.frame_14.setObjectName(u"frame_14")
-        self.frame_14.setMinimumSize(QSize(200, 0))
-        self.frame_14.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_14.setFrameShadow(QFrame.Shadow.Raised)
-
-        self.gridLayout_13.addWidget(self.frame_14, 0, 4, 1, 1)
-
-        self.checkBox_selectall = QCheckBox(self.frame_13)
-        self.checkBox_selectall.setObjectName(u"checkBox_selectall")
-
-        self.gridLayout_13.addWidget(self.checkBox_selectall, 0, 0, 1, 1)
-
-        self.pushButton_rename = QPushButton(self.frame_13)
-        self.pushButton_rename.setObjectName(u"pushButton_rename")
-        self.pushButton_rename.setFont(font1)
-
-        self.gridLayout_13.addWidget(self.pushButton_rename, 0, 7, 1, 1)
-
-        self.label_23 = QLabel(self.frame_13)
-        self.label_23.setObjectName(u"label_23")
-        self.label_23.setFont(font1)
-
-        self.gridLayout_13.addWidget(self.label_23, 0, 5, 1, 1)
+        self.gridLayout_13.addWidget(self.lineEdit_rename, 0, 5, 1, 1)
 
 
         self.gridLayout_20.addWidget(self.frame_13, 0, 0, 1, 1)
@@ -1285,8 +1277,8 @@ class Ui_MainWindow(object):
         self.pushButton_add_4.setDefault(True)
         self.pushButton_save_12.setDefault(True)
         self.pushButton_update_12.setDefault(True)
-        self.pushButton_fsave.setDefault(True)
         self.pushButton_rename.setDefault(True)
+        self.pushButton_fsave.setDefault(True)
         self.pushButton_19.setDefault(True)
         self.pushButton_4.setDefault(True)
         self.pushButton_5.setDefault(True)
@@ -1391,11 +1383,11 @@ class Ui_MainWindow(object):
         self.pushButton_save_12.setText(QCoreApplication.translate("MainWindow", u"\u53d6\u6d88\u5f53\u5c40", None))
         self.pushButton_update_12.setText(QCoreApplication.translate("MainWindow", u"\u7ec8\u70b9\u8bc6\u522b", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), QCoreApplication.translate("MainWindow", u"\u76f4\u64ad\u5927\u5385", None))
-        self.label_22.setText(QCoreApplication.translate("MainWindow", u"\u9009\u62e9\u65b9\u6848\uff1a", None))
-        self.pushButton_fsave.setText(QCoreApplication.translate("MainWindow", u"\u4fdd\u5b58\u65b9\u6848", None))
-        self.checkBox_selectall.setText(QCoreApplication.translate("MainWindow", u"\u5168\u9009", None))
         self.pushButton_rename.setText(QCoreApplication.translate("MainWindow", u"\u91cd\u547d\u540d\u65b9\u6848", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"\u9009\u62e9\u65b9\u6848\uff1a", None))
+        self.checkBox_selectall.setText(QCoreApplication.translate("MainWindow", u"\u5168\u9009", None))
         self.label_23.setText(QCoreApplication.translate("MainWindow", u"\u65b9\u6848\u540d\u79f0\uff1a", None))
+        self.pushButton_fsave.setText(QCoreApplication.translate("MainWindow", u"\u4fdd\u5b58\u65b9\u6848", None))
         self.checkBox_9.setText(QCoreApplication.translate("MainWindow", u"\u80cc\u666f\u5f55\u56fe", None))
         self.checkBox_10.setText(QCoreApplication.translate("MainWindow", u"\u5feb\u901f\u95f8\u95e8", None))
         self.checkBox_12.setText(QCoreApplication.translate("MainWindow", u"\u8bb0\u5f55\u8bef\u5224", None))
