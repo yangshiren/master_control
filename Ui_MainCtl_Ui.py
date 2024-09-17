@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1391, 946)
+        MainWindow.resize(1269, 946)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.gridLayout_2 = QGridLayout(self.centralwidget)
@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         __qtablewidgetitem9 = QTableWidgetItem()
         self.tableWidget_Results.setHorizontalHeaderItem(9, __qtablewidgetitem9)
         self.tableWidget_Results.setObjectName(u"tableWidget_Results")
-        self.tableWidget_Results.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.tableWidget_Results.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.tableWidget_Results.horizontalHeader().setDefaultSectionSize(80)
         self.tableWidget_Results.horizontalHeader().setStretchLastSection(True)
 
@@ -75,8 +75,8 @@ class Ui_MainWindow(object):
 
         self.frame_3 = QFrame(self.tab_3)
         self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setFrameShape(QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_12 = QGridLayout(self.frame_3)
         self.gridLayout_12.setObjectName(u"gridLayout_12")
         self.groupBox = QGroupBox(self.frame_3)
@@ -122,7 +122,7 @@ class Ui_MainWindow(object):
         self.status_live.setFont(font1)
         self.status_live.setAutoFillBackground(False)
         self.status_live.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_live.setPopupMode(QToolButton.DelayedPopup)
+        self.status_live.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_live.setAutoRaise(True)
 
         self.verticalLayout.addWidget(self.status_live)
@@ -132,9 +132,9 @@ class Ui_MainWindow(object):
         self.status_road.setFont(font1)
         self.status_road.setAutoFillBackground(False)
         self.status_road.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_road.setPopupMode(QToolButton.DelayedPopup)
+        self.status_road.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_road.setAutoRaise(True)
-        self.status_road.setArrowType(Qt.NoArrow)
+        self.status_road.setArrowType(Qt.ArrowType.NoArrow)
 
         self.verticalLayout.addWidget(self.status_road)
 
@@ -143,7 +143,7 @@ class Ui_MainWindow(object):
         self.status_lenses.setFont(font1)
         self.status_lenses.setAutoFillBackground(False)
         self.status_lenses.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_lenses.setPopupMode(QToolButton.DelayedPopup)
+        self.status_lenses.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_lenses.setAutoRaise(True)
 
         self.verticalLayout.addWidget(self.status_lenses)
@@ -153,7 +153,7 @@ class Ui_MainWindow(object):
         self.status_track.setFont(font1)
         self.status_track.setAutoFillBackground(False)
         self.status_track.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_track.setPopupMode(QToolButton.DelayedPopup)
+        self.status_track.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_track.setAutoRaise(True)
 
         self.verticalLayout.addWidget(self.status_track)
@@ -172,9 +172,9 @@ class Ui_MainWindow(object):
         self.status_server1.setFont(font1)
         self.status_server1.setAutoFillBackground(False)
         self.status_server1.setStyleSheet(u"background:rgb(255, 0, 0)")
-        self.status_server1.setPopupMode(QToolButton.DelayedPopup)
+        self.status_server1.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_server1.setAutoRaise(True)
-        self.status_server1.setArrowType(Qt.NoArrow)
+        self.status_server1.setArrowType(Qt.ArrowType.NoArrow)
 
         self.gridLayout_3.addWidget(self.status_server1, 0, 0, 1, 2)
 
@@ -183,7 +183,7 @@ class Ui_MainWindow(object):
         self.status_server2.setFont(font1)
         self.status_server2.setAutoFillBackground(False)
         self.status_server2.setStyleSheet(u"background:rgb(255, 0, 0)")
-        self.status_server2.setPopupMode(QToolButton.DelayedPopup)
+        self.status_server2.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_server2.setAutoRaise(True)
 
         self.gridLayout_3.addWidget(self.status_server2, 0, 2, 1, 2)
@@ -193,7 +193,7 @@ class Ui_MainWindow(object):
         self.status_sportsCards.setFont(font1)
         self.status_sportsCards.setAutoFillBackground(False)
         self.status_sportsCards.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_sportsCards.setPopupMode(QToolButton.DelayedPopup)
+        self.status_sportsCards.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_sportsCards.setAutoRaise(True)
 
         self.gridLayout_3.addWidget(self.status_sportsCards, 0, 4, 1, 2)
@@ -201,8 +201,8 @@ class Ui_MainWindow(object):
         self.frame_4 = QFrame(self.groupBox_status_2)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setMinimumSize(QSize(70, 0))
-        self.frame_4.setFrameShape(QFrame.StyledPanel)
-        self.frame_4.setFrameShadow(QFrame.Raised)
+        self.frame_4.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_4.setFrameShadow(QFrame.Shadow.Raised)
 
         self.gridLayout_3.addWidget(self.frame_4, 0, 6, 2, 1)
 
@@ -211,7 +211,7 @@ class Ui_MainWindow(object):
         self.status_obs.setFont(font1)
         self.status_obs.setAutoFillBackground(False)
         self.status_obs.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_obs.setPopupMode(QToolButton.DelayedPopup)
+        self.status_obs.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_obs.setAutoRaise(True)
 
         self.gridLayout_3.addWidget(self.status_obs, 1, 0, 1, 1)
@@ -221,7 +221,7 @@ class Ui_MainWindow(object):
         self.status_mainlenses.setFont(font1)
         self.status_mainlenses.setAutoFillBackground(False)
         self.status_mainlenses.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_mainlenses.setPopupMode(QToolButton.DelayedPopup)
+        self.status_mainlenses.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_mainlenses.setAutoRaise(True)
 
         self.gridLayout_3.addWidget(self.status_mainlenses, 1, 1, 1, 2)
@@ -231,7 +231,7 @@ class Ui_MainWindow(object):
         self.status_Recognition.setFont(font1)
         self.status_Recognition.setAutoFillBackground(False)
         self.status_Recognition.setStyleSheet(u"background:rgb(255, 0, 0)")
-        self.status_Recognition.setPopupMode(QToolButton.DelayedPopup)
+        self.status_Recognition.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_Recognition.setAutoRaise(True)
 
         self.gridLayout_3.addWidget(self.status_Recognition, 1, 3, 1, 2)
@@ -241,7 +241,7 @@ class Ui_MainWindow(object):
         self.status_Extension.setFont(font1)
         self.status_Extension.setAutoFillBackground(False)
         self.status_Extension.setStyleSheet(u"background:rgb(0, 255, 0)")
-        self.status_Extension.setPopupMode(QToolButton.DelayedPopup)
+        self.status_Extension.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_Extension.setAutoRaise(True)
 
         self.gridLayout_3.addWidget(self.status_Extension, 1, 5, 1, 1)
@@ -327,8 +327,8 @@ class Ui_MainWindow(object):
         self.frame_5.setObjectName(u"frame_5")
         self.frame_5.setMinimumSize(QSize(50, 0))
         self.frame_5.setMaximumSize(QSize(100, 16777215))
-        self.frame_5.setFrameShape(QFrame.StyledPanel)
-        self.frame_5.setFrameShadow(QFrame.Raised)
+        self.frame_5.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_5.setFrameShadow(QFrame.Shadow.Raised)
 
         self.gridLayout_8.addWidget(self.frame_5, 0, 4, 1, 1)
 
@@ -350,8 +350,8 @@ class Ui_MainWindow(object):
 
         self.frame = QFrame(self.frame_3)
         self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_17 = QGridLayout(self.frame)
         self.gridLayout_17.setObjectName(u"gridLayout_17")
         self.label_2 = QLabel(self.frame)
@@ -385,15 +385,15 @@ class Ui_MainWindow(object):
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setMinimumSize(QSize(300, 0))
         self.frame_2.setMaximumSize(QSize(380, 16777215))
-        self.frame_2.setFrameShape(QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_10 = QGridLayout(self.frame_2)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
         self.frame_8 = QFrame(self.frame_2)
         self.frame_8.setObjectName(u"frame_8")
         self.frame_8.setMaximumSize(QSize(16777215, 16777215))
-        self.frame_8.setFrameShape(QFrame.StyledPanel)
-        self.frame_8.setFrameShadow(QFrame.Raised)
+        self.frame_8.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_8.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_8)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.pushButton_add_3 = QPushButton(self.frame_8)
@@ -422,8 +422,8 @@ class Ui_MainWindow(object):
 
         self.frame_7 = QFrame(self.frame_2)
         self.frame_7.setObjectName(u"frame_7")
-        self.frame_7.setFrameShape(QFrame.StyledPanel)
-        self.frame_7.setFrameShadow(QFrame.Raised)
+        self.frame_7.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_7.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_7 = QGridLayout(self.frame_7)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
         self.pushButton_add_2 = QPushButton(self.frame_7)
@@ -582,8 +582,8 @@ class Ui_MainWindow(object):
         self.frame_6 = QFrame(self.frame_2)
         self.frame_6.setObjectName(u"frame_6")
         self.frame_6.setMaximumSize(QSize(16777215, 16777215))
-        self.frame_6.setFrameShape(QFrame.StyledPanel)
-        self.frame_6.setFrameShadow(QFrame.Raised)
+        self.frame_6.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_6.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame_6)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.pushButton_add = QPushButton(self.frame_6)
@@ -687,8 +687,8 @@ class Ui_MainWindow(object):
 
         self.frame_9 = QFrame(self.widget_9)
         self.frame_9.setObjectName(u"frame_9")
-        self.frame_9.setFrameShape(QFrame.StyledPanel)
-        self.frame_9.setFrameShadow(QFrame.Raised)
+        self.frame_9.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_9.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame_9)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.pushButton_add_4 = QPushButton(self.frame_9)
@@ -731,8 +731,8 @@ class Ui_MainWindow(object):
         self.gridLayout_20.setObjectName(u"gridLayout_20")
         self.frame_13 = QFrame(self.tab)
         self.frame_13.setObjectName(u"frame_13")
-        self.frame_13.setFrameShape(QFrame.StyledPanel)
-        self.frame_13.setFrameShadow(QFrame.Raised)
+        self.frame_13.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_13.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_13 = QGridLayout(self.frame_13)
         self.gridLayout_13.setObjectName(u"gridLayout_13")
         self.comboBox_plan = QComboBox(self.frame_13)
@@ -763,8 +763,8 @@ class Ui_MainWindow(object):
         self.frame_14 = QFrame(self.frame_13)
         self.frame_14.setObjectName(u"frame_14")
         self.frame_14.setMinimumSize(QSize(200, 0))
-        self.frame_14.setFrameShape(QFrame.StyledPanel)
-        self.frame_14.setFrameShadow(QFrame.Raised)
+        self.frame_14.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_14.setFrameShadow(QFrame.Shadow.Raised)
 
         self.gridLayout_13.addWidget(self.frame_14, 0, 4, 1, 1)
 
@@ -792,8 +792,8 @@ class Ui_MainWindow(object):
         self.frame_10.setObjectName(u"frame_10")
         self.frame_10.setMinimumSize(QSize(300, 0))
         self.frame_10.setMaximumSize(QSize(300, 16777215))
-        self.frame_10.setFrameShape(QFrame.StyledPanel)
-        self.frame_10.setFrameShadow(QFrame.Raised)
+        self.frame_10.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_10.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_18 = QGridLayout(self.frame_10)
         self.gridLayout_18.setObjectName(u"gridLayout_18")
         self.textBrowser = QTextBrowser(self.frame_10)
@@ -803,8 +803,8 @@ class Ui_MainWindow(object):
 
         self.frame_12 = QFrame(self.frame_10)
         self.frame_12.setObjectName(u"frame_12")
-        self.frame_12.setFrameShape(QFrame.StyledPanel)
-        self.frame_12.setFrameShadow(QFrame.Raised)
+        self.frame_12.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_12.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_15 = QGridLayout(self.frame_12)
         self.gridLayout_15.setObjectName(u"gridLayout_15")
         self.gridLayout_15.setContentsMargins(-1, 0, -1, 0)
@@ -929,8 +929,8 @@ class Ui_MainWindow(object):
 
         self.frame_11 = QFrame(self.frame_10)
         self.frame_11.setObjectName(u"frame_11")
-        self.frame_11.setFrameShape(QFrame.StyledPanel)
-        self.frame_11.setFrameShadow(QFrame.Raised)
+        self.frame_11.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_11.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_14 = QGridLayout(self.frame_11)
         self.gridLayout_14.setObjectName(u"gridLayout_14")
         self.gridLayout_14.setContentsMargins(-1, 0, -1, 0)
@@ -1010,8 +1010,8 @@ class Ui_MainWindow(object):
         self.gridLayout_22.setContentsMargins(-1, 0, -1, 0)
         self.frame_17 = QFrame(self.groupBox_6)
         self.frame_17.setObjectName(u"frame_17")
-        self.frame_17.setFrameShape(QFrame.StyledPanel)
-        self.frame_17.setFrameShadow(QFrame.Raised)
+        self.frame_17.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_17.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_23 = QGridLayout(self.frame_17)
         self.gridLayout_23.setObjectName(u"gridLayout_23")
         self.gridLayout_23.setContentsMargins(-1, 0, -1, 0)
@@ -1029,7 +1029,7 @@ class Ui_MainWindow(object):
         font4.setBold(False)
         self.lineEdit_axis0.setFont(font4)
         self.lineEdit_axis0.setStyleSheet(u"background:rgb(240,240,240)")
-        self.lineEdit_axis0.setEchoMode(QLineEdit.Normal)
+        self.lineEdit_axis0.setEchoMode(QLineEdit.EchoMode.Normal)
         self.lineEdit_axis0.setReadOnly(True)
 
         self.gridLayout_23.addWidget(self.lineEdit_axis0, 0, 1, 1, 1)
@@ -1044,7 +1044,7 @@ class Ui_MainWindow(object):
         self.lineEdit_axis1.setObjectName(u"lineEdit_axis1")
         self.lineEdit_axis1.setFont(font4)
         self.lineEdit_axis1.setStyleSheet(u"background:rgb(240,240,240)")
-        self.lineEdit_axis1.setEchoMode(QLineEdit.Normal)
+        self.lineEdit_axis1.setEchoMode(QLineEdit.EchoMode.Normal)
         self.lineEdit_axis1.setReadOnly(True)
 
         self.gridLayout_23.addWidget(self.lineEdit_axis1, 1, 1, 1, 1)
@@ -1059,7 +1059,7 @@ class Ui_MainWindow(object):
         self.lineEdit_axis2.setObjectName(u"lineEdit_axis2")
         self.lineEdit_axis2.setFont(font4)
         self.lineEdit_axis2.setStyleSheet(u"background:rgb(240,240,240)")
-        self.lineEdit_axis2.setEchoMode(QLineEdit.Normal)
+        self.lineEdit_axis2.setEchoMode(QLineEdit.EchoMode.Normal)
         self.lineEdit_axis2.setReadOnly(True)
 
         self.gridLayout_23.addWidget(self.lineEdit_axis2, 2, 1, 1, 1)
@@ -1074,7 +1074,7 @@ class Ui_MainWindow(object):
         self.lineEdit_axis3.setObjectName(u"lineEdit_axis3")
         self.lineEdit_axis3.setFont(font4)
         self.lineEdit_axis3.setStyleSheet(u"background:rgb(240,240,240)")
-        self.lineEdit_axis3.setEchoMode(QLineEdit.Normal)
+        self.lineEdit_axis3.setEchoMode(QLineEdit.EchoMode.Normal)
         self.lineEdit_axis3.setReadOnly(True)
 
         self.gridLayout_23.addWidget(self.lineEdit_axis3, 3, 1, 1, 1)
@@ -1089,7 +1089,7 @@ class Ui_MainWindow(object):
         self.lineEdit_axis4.setObjectName(u"lineEdit_axis4")
         self.lineEdit_axis4.setFont(font4)
         self.lineEdit_axis4.setStyleSheet(u"background:rgb(240,240,240)")
-        self.lineEdit_axis4.setEchoMode(QLineEdit.Normal)
+        self.lineEdit_axis4.setEchoMode(QLineEdit.EchoMode.Normal)
         self.lineEdit_axis4.setReadOnly(True)
 
         self.gridLayout_23.addWidget(self.lineEdit_axis4, 4, 1, 1, 1)
@@ -1100,8 +1100,8 @@ class Ui_MainWindow(object):
         self.frame_16 = QFrame(self.groupBox_6)
         self.frame_16.setObjectName(u"frame_16")
         self.frame_16.setMinimumSize(QSize(0, 0))
-        self.frame_16.setFrameShape(QFrame.StyledPanel)
-        self.frame_16.setFrameShadow(QFrame.Raised)
+        self.frame_16.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_16.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_19 = QGridLayout(self.frame_16)
         self.gridLayout_19.setObjectName(u"gridLayout_19")
         self.gridLayout_19.setContentsMargins(-1, 0, -1, 0)
@@ -1124,16 +1124,16 @@ class Ui_MainWindow(object):
         self.frame_15 = QFrame(self.groupBox_6)
         self.frame_15.setObjectName(u"frame_15")
         self.frame_15.setMinimumSize(QSize(0, 100))
-        self.frame_15.setFrameShape(QFrame.StyledPanel)
-        self.frame_15.setFrameShadow(QFrame.Raised)
+        self.frame_15.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_15.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_24 = QGridLayout(self.frame_15)
         self.gridLayout_24.setObjectName(u"gridLayout_24")
         self.gridLayout_24.setContentsMargins(-1, 0, -1, 0)
         self.frame_18 = QFrame(self.frame_15)
         self.frame_18.setObjectName(u"frame_18")
         self.frame_18.setMaximumSize(QSize(135, 16777215))
-        self.frame_18.setFrameShape(QFrame.StyledPanel)
-        self.frame_18.setFrameShadow(QFrame.Raised)
+        self.frame_18.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_18.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_21 = QGridLayout(self.frame_18)
         self.gridLayout_21.setObjectName(u"gridLayout_21")
         self.gridLayout_21.setContentsMargins(-1, 0, -1, 0)
@@ -1146,7 +1146,7 @@ class Ui_MainWindow(object):
         self.lineEdit_CarNo = QLineEdit(self.frame_18)
         self.lineEdit_CarNo.setObjectName(u"lineEdit_CarNo")
         self.lineEdit_CarNo.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_CarNo.setAlignment(Qt.AlignCenter)
+        self.lineEdit_CarNo.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.gridLayout_21.addWidget(self.lineEdit_CarNo, 0, 1, 1, 1)
 
@@ -1211,8 +1211,8 @@ class Ui_MainWindow(object):
         self.gridLayout_20.addWidget(self.frame_10, 0, 1, 2, 1)
 
         self.tableWidget_Step = QTableWidget(self.tab)
-        if (self.tableWidget_Step.columnCount() < 11):
-            self.tableWidget_Step.setColumnCount(11)
+        if (self.tableWidget_Step.columnCount() < 14):
+            self.tableWidget_Step.setColumnCount(14)
         __qtablewidgetitem10 = QTableWidgetItem()
         self.tableWidget_Step.setHorizontalHeaderItem(0, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
@@ -1235,8 +1235,14 @@ class Ui_MainWindow(object):
         self.tableWidget_Step.setHorizontalHeaderItem(9, __qtablewidgetitem19)
         __qtablewidgetitem20 = QTableWidgetItem()
         self.tableWidget_Step.setHorizontalHeaderItem(10, __qtablewidgetitem20)
+        __qtablewidgetitem21 = QTableWidgetItem()
+        self.tableWidget_Step.setHorizontalHeaderItem(11, __qtablewidgetitem21)
+        __qtablewidgetitem22 = QTableWidgetItem()
+        self.tableWidget_Step.setHorizontalHeaderItem(12, __qtablewidgetitem22)
+        __qtablewidgetitem23 = QTableWidgetItem()
+        self.tableWidget_Step.setHorizontalHeaderItem(13, __qtablewidgetitem23)
         self.tableWidget_Step.setObjectName(u"tableWidget_Step")
-        self.tableWidget_Step.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.tableWidget_Step.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.tableWidget_Step.horizontalHeader().setDefaultSectionSize(80)
         self.tableWidget_Step.horizontalHeader().setStretchLastSection(True)
 
@@ -1433,21 +1439,27 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem9 = self.tableWidget_Step.horizontalHeaderItem(1)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"\u5708\u6570", None));
         ___qtablewidgetitem10 = self.tableWidget_Step.horizontalHeaderItem(2)
-        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"\u5de6\u53f3", None));
+        ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"\u79fb\u52a8", None));
         ___qtablewidgetitem11 = self.tableWidget_Step.horizontalHeaderItem(3)
-        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"\u524d\u540e", None));
+        ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"\u8f741", None));
         ___qtablewidgetitem12 = self.tableWidget_Step.horizontalHeaderItem(4)
-        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"\u4e0a\u4e0b", None));
+        ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"\u8f742", None));
         ___qtablewidgetitem13 = self.tableWidget_Step.horizontalHeaderItem(5)
-        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"\u5934\u65cb\u8f6c", None));
+        ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"\u8f743", None));
         ___qtablewidgetitem14 = self.tableWidget_Step.horizontalHeaderItem(6)
-        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"\u5934\u4e0a\u4e0b", None));
+        ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"\u8f744", None));
         ___qtablewidgetitem15 = self.tableWidget_Step.horizontalHeaderItem(7)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"\u901f\u5ea6", None));
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"\u8f745", None));
         ___qtablewidgetitem16 = self.tableWidget_Step.horizontalHeaderItem(8)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"\u52a0\u901f", None));
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"\u901f\u5ea6", None));
         ___qtablewidgetitem17 = self.tableWidget_Step.horizontalHeaderItem(9)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"\u51cf\u901f", None));
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"\u52a0\u901f\u5ea6", None));
+        ___qtablewidgetitem18 = self.tableWidget_Step.horizontalHeaderItem(10)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"\u51cf\u901f\u5ea6", None));
+        ___qtablewidgetitem19 = self.tableWidget_Step.horizontalHeaderItem(11)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"\u987a/\u9006", None));
+        ___qtablewidgetitem20 = self.tableWidget_Step.horizontalHeaderItem(12)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"\u673a\u5173", None));
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"\u8fd0\u52a8\u53c2\u6570", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"\u56fe\u50cf\u8bc6\u522b", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), QCoreApplication.translate("MainWindow", u"\u955c\u5934\u8bbe\u7f6e", None))

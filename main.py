@@ -41,8 +41,9 @@ class MasterWindow(QMainWindow):
         if state==2:
             flag = True
         for row in range(self.ui.tableWidget_Step.rowCount()):
-            checkbox = self.ui.tableWidget_Step.cellWidget(row, 0)  # Get the checkbox in the first column
-            if checkbox:
+            centered_widget = self.ui.tableWidget_Step.cellWidget(row, 0)  # Get the checkbox in the first column
+            if centered_widget:
+                checkbox = centered_widget.layout().itemAt(0).widget()
                 checkbox.setChecked(flag)
 
 
@@ -53,6 +54,13 @@ class MasterWindow(QMainWindow):
     # tableWidget 添加右键按钮
     def tableInit(self):
         self.ui.tableWidget_Step.setRowCount(20)
+        for i in range(self.ui.tableWidget_Step.columnCount()):
+            if i==0 or i==1:
+                self.ui.tableWidget_Step.setColumnWidth(i, 40)
+            if i == 2:
+                self.ui.tableWidget_Step.setColumnWidth(i, 60)
+            if i >= 8:
+                self.ui.tableWidget_Step.setColumnWidth(i, 60)
         for row in range(self.ui.tableWidget_Step.rowCount()):
             comboBox = QComboBox()
             comboBox.addItems(["直线", "圆弧"])
@@ -111,14 +119,15 @@ class MasterWindow(QMainWindow):
         row_list = []
         # 循环行
         for row in range(self.ui.tableWidget_Step.rowCount()):
-            checkbox = self.ui.tableWidget_Step.cellWidget(row, 0)
+            centered_widget = self.ui.tableWidget_Step.cellWidget(row, 0)  # Get the checkbox in the first column
+            checkbox = centered_widget.layout().itemAt(0).widget()
             if checkbox.isChecked():
                 row_data={}
                 for col in range(self.ui.tableWidget_Step.columnCount()):
                     item = self.ui.tableWidget_Step.item(row, col)
                     temp = None
                     if col == 2:
-                        temp = self.ui.tableWidget_Step.cellWidget(row, col).currentText()
+                        temp = self.ui.tableWidget_Step.cellWidget(row, col).layout().itemAt(0).widget().currentText()
                     else:
                         temp =  item.text() if item else None
                     row_data[col + 1] = temp

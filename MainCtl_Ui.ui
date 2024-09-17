@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1391</width>
+    <width>1269</width>
     <height>946</height>
    </rect>
   </property>
@@ -36,7 +36,7 @@
           <item row="2" column="0">
            <widget class="QTableWidget" name="tableWidget_Results">
             <property name="selectionBehavior">
-             <enum>QAbstractItemView::SelectRows</enum>
+             <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
             </property>
             <attribute name="horizontalHeaderDefaultSectionSize">
              <number>80</number>
@@ -99,10 +99,10 @@
           <item row="1" column="0">
            <widget class="QFrame" name="frame_3">
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::Shape::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Shadow::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_12">
              <item row="0" column="0" rowspan="3">
@@ -111,7 +111,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -159,7 +158,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -173,7 +171,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -187,7 +184,7 @@
                    <string>直播状态</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -200,7 +197,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -214,13 +210,13 @@
                    <string>赛道状态</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
                   </property>
                   <property name="arrowType">
-                   <enum>Qt::NoArrow</enum>
+                   <enum>Qt::ArrowType::NoArrow</enum>
                   </property>
                  </widget>
                 </item>
@@ -230,7 +226,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -244,7 +239,7 @@
                    <string>镜头状态</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -257,7 +252,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -271,7 +265,7 @@
                    <string>轨道状态</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -293,7 +287,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -307,7 +300,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -321,13 +313,13 @@
                    <string>排名服务器</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
                   </property>
                   <property name="arrowType">
-                   <enum>Qt::NoArrow</enum>
+                   <enum>Qt::ArrowType::NoArrow</enum>
                   </property>
                  </widget>
                 </item>
@@ -337,7 +329,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -351,7 +342,7 @@
                    <string>排名服务器2</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -364,7 +355,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -378,7 +368,7 @@
                    <string>运动卡</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -394,10 +384,10 @@
                    </size>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::Shape::StyledPanel</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                  </widget>
                 </item>
@@ -407,7 +397,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -421,7 +410,7 @@
                    <string>OBS状态</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -434,7 +423,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -448,7 +436,7 @@
                    <string>主镜头</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -461,7 +449,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -475,7 +462,7 @@
                    <string>图像识别1</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -488,7 +475,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -502,7 +488,7 @@
                    <string>分机1</string>
                   </property>
                   <property name="popupMode">
-                   <enum>QToolButton::DelayedPopup</enum>
+                   <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
                   </property>
                   <property name="autoRaise">
                    <bool>true</bool>
@@ -518,7 +504,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -532,7 +517,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -547,7 +531,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -562,7 +545,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -577,7 +559,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -592,7 +573,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -607,7 +587,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -631,7 +610,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -694,10 +672,10 @@
                    </size>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::Shape::StyledPanel</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                  </widget>
                 </item>
@@ -716,7 +694,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>12</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -737,10 +714,10 @@
              <item row="2" column="4">
               <widget class="QFrame" name="frame">
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QGridLayout" name="gridLayout_17">
                 <item row="0" column="3">
@@ -749,7 +726,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -783,7 +759,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -816,10 +791,10 @@
              </size>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::Shape::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Shadow::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_10">
              <item row="0" column="0">
@@ -831,10 +806,10 @@
                 </size>
                </property>
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_2">
                 <item>
@@ -849,7 +824,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -873,7 +847,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -894,10 +867,10 @@
              <item row="3" column="0">
               <widget class="QFrame" name="frame_7">
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QGridLayout" name="gridLayout_7">
                 <item row="0" column="0">
@@ -1306,10 +1279,10 @@
                 </size>
                </property>
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout">
                 <item>
@@ -1410,7 +1383,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>20</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1428,7 +1400,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>12</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1443,7 +1414,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1471,7 +1441,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>12</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1486,7 +1455,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1514,7 +1482,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1526,7 +1493,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1538,10 +1504,10 @@
                 <item row="4" column="0" colspan="3">
                  <widget class="QFrame" name="frame_9">
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::Shape::StyledPanel</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QHBoxLayout" name="horizontalLayout_3">
                    <item>
@@ -1629,10 +1595,10 @@
           <item row="0" column="0">
            <widget class="QFrame" name="frame_13">
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::Shape::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Shadow::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_13">
              <item row="0" column="2">
@@ -1647,7 +1613,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -1659,7 +1624,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -1680,7 +1644,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -1704,10 +1667,10 @@
                 </size>
                </property>
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
               </widget>
              </item>
@@ -1724,7 +1687,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -1742,7 +1704,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -1769,10 +1730,10 @@
              </size>
             </property>
             <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+             <enum>QFrame::Shape::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
+             <enum>QFrame::Shadow::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_18">
              <item row="11" column="0">
@@ -1781,10 +1742,10 @@
              <item row="6" column="0">
               <widget class="QFrame" name="frame_12">
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QGridLayout" name="gridLayout_15">
                 <property name="topMargin">
@@ -1799,7 +1760,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1814,7 +1774,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1829,7 +1788,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1844,7 +1802,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1859,7 +1816,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1874,7 +1830,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1892,7 +1847,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1907,7 +1861,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1925,7 +1878,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1940,7 +1892,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1958,7 +1909,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1973,7 +1923,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -1991,7 +1940,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2009,7 +1957,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2027,7 +1974,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2045,10 +1991,10 @@
              <item row="4" column="0">
               <widget class="QFrame" name="frame_11">
                <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
+                <enum>QFrame::Shape::StyledPanel</enum>
                </property>
                <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
+                <enum>QFrame::Shadow::Raised</enum>
                </property>
                <layout class="QGridLayout" name="gridLayout_14">
                 <property name="topMargin">
@@ -2063,7 +2009,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2081,7 +2026,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2102,7 +2046,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2123,7 +2066,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2141,7 +2083,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2159,7 +2100,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2177,7 +2117,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2192,7 +2131,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2207,7 +2145,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2228,7 +2165,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -2245,10 +2181,10 @@
                 <item row="1" column="0">
                  <widget class="QFrame" name="frame_17">
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::Shape::StyledPanel</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_23">
                    <property name="topMargin">
@@ -2263,7 +2199,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2278,7 +2213,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>50</weight>
                        <bold>false</bold>
                       </font>
                      </property>
@@ -2286,7 +2220,7 @@
                       <string notr="true">background:rgb(240,240,240)</string>
                      </property>
                      <property name="echoMode">
-                      <enum>QLineEdit::Normal</enum>
+                      <enum>QLineEdit::EchoMode::Normal</enum>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
@@ -2299,7 +2233,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2314,7 +2247,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>50</weight>
                        <bold>false</bold>
                       </font>
                      </property>
@@ -2322,7 +2254,7 @@
                       <string notr="true">background:rgb(240,240,240)</string>
                      </property>
                      <property name="echoMode">
-                      <enum>QLineEdit::Normal</enum>
+                      <enum>QLineEdit::EchoMode::Normal</enum>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
@@ -2335,7 +2267,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2350,7 +2281,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>50</weight>
                        <bold>false</bold>
                       </font>
                      </property>
@@ -2358,7 +2288,7 @@
                       <string notr="true">background:rgb(240,240,240)</string>
                      </property>
                      <property name="echoMode">
-                      <enum>QLineEdit::Normal</enum>
+                      <enum>QLineEdit::EchoMode::Normal</enum>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
@@ -2371,7 +2301,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2386,7 +2315,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>50</weight>
                        <bold>false</bold>
                       </font>
                      </property>
@@ -2394,7 +2322,7 @@
                       <string notr="true">background:rgb(240,240,240)</string>
                      </property>
                      <property name="echoMode">
-                      <enum>QLineEdit::Normal</enum>
+                      <enum>QLineEdit::EchoMode::Normal</enum>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
@@ -2407,7 +2335,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2422,7 +2349,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>50</weight>
                        <bold>false</bold>
                       </font>
                      </property>
@@ -2430,7 +2356,7 @@
                       <string notr="true">background:rgb(240,240,240)</string>
                      </property>
                      <property name="echoMode">
-                      <enum>QLineEdit::Normal</enum>
+                      <enum>QLineEdit::EchoMode::Normal</enum>
                      </property>
                      <property name="readOnly">
                       <bool>true</bool>
@@ -2449,10 +2375,10 @@
                    </size>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::Shape::StyledPanel</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_19">
                    <property name="topMargin">
@@ -2467,7 +2393,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2488,7 +2413,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2512,10 +2436,10 @@
                    </size>
                   </property>
                   <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
+                   <enum>QFrame::Shape::StyledPanel</enum>
                   </property>
                   <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
+                   <enum>QFrame::Shadow::Raised</enum>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_24">
                    <property name="topMargin">
@@ -2533,10 +2457,10 @@
                       </size>
                      </property>
                      <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
+                      <enum>QFrame::Shape::StyledPanel</enum>
                      </property>
                      <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
+                      <enum>QFrame::Shadow::Raised</enum>
                      </property>
                      <layout class="QGridLayout" name="gridLayout_21">
                       <property name="topMargin">
@@ -2551,7 +2475,6 @@
                          <font>
                           <family>微软雅黑</family>
                           <pointsize>10</pointsize>
-                          <weight>75</weight>
                           <bold>true</bold>
                          </font>
                         </property>
@@ -2569,7 +2492,7 @@
                          </size>
                         </property>
                         <property name="alignment">
-                         <set>Qt::AlignCenter</set>
+                         <set>Qt::AlignmentFlag::AlignCenter</set>
                         </property>
                        </widget>
                       </item>
@@ -2588,7 +2511,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2612,7 +2534,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2636,7 +2557,6 @@
                       <font>
                        <family>微软雅黑</family>
                        <pointsize>10</pointsize>
-                       <weight>75</weight>
                        <bold>true</bold>
                       </font>
                      </property>
@@ -2660,7 +2580,6 @@
                 <font>
                  <family>微软雅黑</family>
                  <pointsize>10</pointsize>
-                 <weight>75</weight>
                  <bold>true</bold>
                 </font>
                </property>
@@ -2680,7 +2599,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2695,7 +2613,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2710,7 +2627,6 @@
                    <font>
                     <family>微软雅黑</family>
                     <pointsize>10</pointsize>
-                    <weight>75</weight>
                     <bold>true</bold>
                    </font>
                   </property>
@@ -2728,7 +2644,7 @@
           <item row="1" column="0">
            <widget class="QTableWidget" name="tableWidget_Step">
             <property name="selectionBehavior">
-             <enum>QAbstractItemView::SelectRows</enum>
+             <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
             </property>
             <attribute name="horizontalHeaderDefaultSectionSize">
              <number>80</number>
@@ -2748,27 +2664,32 @@
             </column>
             <column>
              <property name="text">
-              <string>左右</string>
+              <string>移动</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>前后</string>
+              <string>轴1</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>上下</string>
+              <string>轴2</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>头旋转</string>
+              <string>轴3</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>头上下</string>
+              <string>轴4</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>轴5</string>
              </property>
             </column>
             <column>
@@ -2778,12 +2699,22 @@
             </column>
             <column>
              <property name="text">
-              <string>加速</string>
+              <string>加速度</string>
              </property>
             </column>
             <column>
              <property name="text">
-              <string>减速</string>
+              <string>减速度</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>顺/逆</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>机关</string>
              </property>
             </column>
             <column>
