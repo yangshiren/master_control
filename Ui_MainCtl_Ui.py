@@ -192,7 +192,7 @@ class Ui_MainWindow(object):
         self.status_sportsCards.setObjectName(u"status_sportsCards")
         self.status_sportsCards.setFont(font1)
         self.status_sportsCards.setAutoFillBackground(False)
-        self.status_sportsCards.setStyleSheet(u"background:rgb(0, 255, 0)")
+        self.status_sportsCards.setStyleSheet(u"background:rgb(255, 0, 0)")
         self.status_sportsCards.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_sportsCards.setAutoRaise(True)
 
@@ -210,7 +210,7 @@ class Ui_MainWindow(object):
         self.status_obs.setObjectName(u"status_obs")
         self.status_obs.setFont(font1)
         self.status_obs.setAutoFillBackground(False)
-        self.status_obs.setStyleSheet(u"background:rgb(0, 255, 0)")
+        self.status_obs.setStyleSheet(u"background:rgb(255, 0, 0)")
         self.status_obs.setPopupMode(QToolButton.ToolButtonPopupMode.DelayedPopup)
         self.status_obs.setAutoRaise(True)
 
@@ -1203,8 +1203,8 @@ class Ui_MainWindow(object):
         self.gridLayout_20.addWidget(self.frame_10, 0, 1, 2, 1)
 
         self.tableWidget_Step = QTableWidget(self.tab)
-        if (self.tableWidget_Step.columnCount() < 14):
-            self.tableWidget_Step.setColumnCount(14)
+        if (self.tableWidget_Step.columnCount() < 16):
+            self.tableWidget_Step.setColumnCount(16)
         __qtablewidgetitem10 = QTableWidgetItem()
         self.tableWidget_Step.setHorizontalHeaderItem(0, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
@@ -1233,6 +1233,10 @@ class Ui_MainWindow(object):
         self.tableWidget_Step.setHorizontalHeaderItem(12, __qtablewidgetitem22)
         __qtablewidgetitem23 = QTableWidgetItem()
         self.tableWidget_Step.setHorizontalHeaderItem(13, __qtablewidgetitem23)
+        __qtablewidgetitem24 = QTableWidgetItem()
+        self.tableWidget_Step.setHorizontalHeaderItem(14, __qtablewidgetitem24)
+        __qtablewidgetitem25 = QTableWidgetItem()
+        self.tableWidget_Step.setHorizontalHeaderItem(15, __qtablewidgetitem25)
         self.tableWidget_Step.setObjectName(u"tableWidget_Step")
         self.tableWidget_Step.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.tableWidget_Step.horizontalHeader().setDefaultSectionSize(80)
@@ -1449,9 +1453,13 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem18 = self.tableWidget_Step.horizontalHeaderItem(10)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"\u51cf\u901f\u5ea6", None));
         ___qtablewidgetitem19 = self.tableWidget_Step.horizontalHeaderItem(11)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"\u987a/\u9006", None));
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"\u62c9\u8fd1", None));
         ___qtablewidgetitem20 = self.tableWidget_Step.horizontalHeaderItem(12)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"\u673a\u5173", None));
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"\u62c9\u8fdc", None));
+        ___qtablewidgetitem21 = self.tableWidget_Step.horizontalHeaderItem(13)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"\u987a/\u9006", None));
+        ___qtablewidgetitem22 = self.tableWidget_Step.horizontalHeaderItem(14)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"\u673a\u5173", None));
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), QCoreApplication.translate("MainWindow", u"\u8fd0\u52a8\u53c2\u6570", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"\u56fe\u50cf\u8bc6\u522b", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), QCoreApplication.translate("MainWindow", u"\u955c\u5934\u8bbe\u7f6e", None))

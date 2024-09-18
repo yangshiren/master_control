@@ -362,7 +362,7 @@
                    <bool>false</bool>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background:rgb(0, 255, 0)</string>
+                   <string notr="true">background:rgb(255, 0, 0)</string>
                   </property>
                   <property name="text">
                    <string>运动卡</string>
@@ -404,7 +404,7 @@
                    <bool>false</bool>
                   </property>
                   <property name="styleSheet">
-                   <string notr="true">background:rgb(0, 255, 0)</string>
+                   <string notr="true">background:rgb(255, 0, 0)</string>
                   </property>
                   <property name="text">
                    <string>OBS状态</string>
@@ -2689,6 +2689,16 @@
             <column>
              <property name="text">
               <string>减速度</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>拉近</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>拉远</string>
              </property>
             </column>
             <column>
