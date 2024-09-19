@@ -68,3 +68,17 @@ class TrackDb:
         finally:
             cur.close()
             con.close()
+
+    @staticmethod
+    def deleteDB(plan_id:int):
+        con = sqlite3.connect("master.db")
+        cur = con.cursor()
+        sql = '''DELETE FROM param_setting_db WHERE plan_id = ?;'''
+        try:
+            cur.execute(sql,(plan_id,))
+            con.commit()
+        except BaseException as e:
+            print(e)
+        finally:
+            cur.close()
+            con.close()

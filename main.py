@@ -1,5 +1,7 @@
 import json
 import re
+from email.policy import default
+
 from PySide6.QtCore import QObject,Qt
 from PySide6.QtWidgets import QMainWindow, QMenu, QComboBox, QCheckBox, QApplication, QWidget, QHBoxLayout, \
     QTableWidgetItem, QInputDialog, QDialog, QMessageBox
@@ -27,6 +29,7 @@ class MasterWindow(QMainWindow):
         self.bind()
 
     def initUi(self):
+        self.ui.plain_log.setMaximumBlockCount(8000)
         self.planboBoxInit()
         self.tableInit()
 
@@ -39,6 +42,7 @@ class MasterWindow(QMainWindow):
         # 绑定gas,obs状态监听
         self.tcpServer.gas_connection_signal.connect(self.gasStatus)
         self.tcpServer.obs_connection_signal.connect(self.obsStatus)
+        self.tcpServer.log_signal.connect(self.ui.plain_log.appendHtml)
         self.ui.comboBox_plan.currentTextChanged.connect(self.planChange)
         self.ui.tableWidget_Step.setContextMenuPolicy(Qt.ContextMenuPolicy.CustomContextMenu)
         self.ui.tableWidget_Step.customContextMenuRequested.connect(self.onCustomRequested)
@@ -115,11 +119,18 @@ class MasterWindow(QMainWindow):
                              "axis3":item[5], "axis4":item[6],"axis5":item[7], "vel":item[8],"start":item[9],"brake":item[10],
                              "zoom_in":item[11],"zoom_out":item[12],"pros_cons":item[13],"delay":"","take_time":"","organ":item[14]}
                     TrackDb.insertDb(model)
-                MessageBox("添加成功!", "").exec()
+                MessageBox("Success!", "保存方案操作成功").exec()
                 planList: list = PlanDb.findAll()
-                if planList and len(planList):
+                if planList:
+                    strList = []
+                    defaultStr =""
                     for item in planList:
-                        self.ui.comboBox_plan.addItem(item[1], item[0])
+                        if item[2]==1:
+                            defaultStr = item[1]
+                        strList.append(item[1])
+                    self.ui.comboBox_plan.clear()
+                    self.ui.comboBox_plan.addItems(strList)
+                    self.ui.comboBox_plan.setCurrentText(defaultStr)
             else:
                 MessageBox("警告!","请输入方案名称,未能保存方案").exec()
 
@@ -173,6 +184,8 @@ class MasterWindow(QMainWindow):
             clear = menu.addAction("清空")
             clear.triggered.connect(self.clearActionTriggered)
             edit = menu.addAction("修改数据")
+            if self.ui.comboBox_plan.currentText()=="":
+                edit.setDisabled(True)
             edit.triggered.connect(self.editActionTriggered)
             run = menu.addAction("运行")
             run.triggered.connect(self.runActionTriggered)
@@ -202,6 +215,20 @@ class MasterWindow(QMainWindow):
                 self.ui.tableWidget_Step.setItem(row, column, None)
     # 修改数据
     def editActionTriggered(self):
+        global sport_tables
+        planStr =  self.ui.comboBox_plan.currentText()
+        planList = PlanDb.findByName(planStr)
+        if planList:
+            TrackDb.deleteDB(planList[0][0])
+            for index, item in enumerate(sport_tables):
+                model: dict = {"num": index, "plan_id": planList[0][0], "circle": item[1], "move": item[2], "axis1": item[3],
+                               "axis2": item[4],
+                               "axis3": item[5], "axis4": item[6], "axis5": item[7], "vel": item[8], "start": item[9],
+                               "brake": item[10],
+                               "zoom_in": item[11], "zoom_out": item[12], "pros_cons": item[13], "delay": "",
+                               "take_time": "", "organ": item[14]}
+                TrackDb.insertDb(model)
+            MessageBox("Success!", "修改方案操作成功").exec()
         pass
     # 运行
     def runActionTriggered(self):
@@ -227,6 +254,7 @@ class MasterWindow(QMainWindow):
                     self.tcpServer.broadcast_message(json.dumps({
                         "type": "gas_io_test",
                         "message": "%s|%s" % ("1", item[12])}))
+
 
 
 if __name__ == '__main__':

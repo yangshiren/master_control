@@ -18,9 +18,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QAbstractItemView, QApplication, QCheckBox, QComboBox,
     QFrame, QGridLayout, QGroupBox, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QMainWindow,
-    QPushButton, QRadioButton, QSizePolicy, QStatusBar,
-    QTabWidget, QTableWidget, QTableWidgetItem, QTextBrowser,
-    QToolButton, QVBoxLayout, QWidget)
+    QPlainTextEdit, QPushButton, QRadioButton, QSizePolicy,
+    QStatusBar, QTabWidget, QTableWidget, QTableWidgetItem,
+    QTextBrowser, QToolButton, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -415,11 +415,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout_10.addWidget(self.frame_8, 0, 0, 1, 1)
 
-        self.textBrowser_msg = QTextBrowser(self.frame_2)
-        self.textBrowser_msg.setObjectName(u"textBrowser_msg")
-
-        self.gridLayout_10.addWidget(self.textBrowser_msg, 4, 0, 1, 1)
-
         self.frame_7 = QFrame(self.frame_2)
         self.frame_7.setObjectName(u"frame_7")
         self.frame_7.setFrameShape(QFrame.Shape.StyledPanel)
@@ -720,6 +715,12 @@ class Ui_MainWindow(object):
 
 
         self.gridLayout_10.addWidget(self.widget_9, 2, 0, 1, 1)
+
+        self.plain_log = QPlainTextEdit(self.frame_2)
+        self.plain_log.setObjectName(u"plain_log")
+        self.plain_log.setReadOnly(True)
+
+        self.gridLayout_10.addWidget(self.plain_log, 4, 0, 1, 1)
 
 
         self.gridLayout_11.addWidget(self.frame_2, 1, 1, 2, 1)
@@ -1269,7 +1270,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         self.pushButton.setDefault(True)
         self.pushButton_add.setDefault(True)
         self.pushButton_save.setDefault(True)

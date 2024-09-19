@@ -26,7 +26,7 @@
          </font>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_3">
          <attribute name="title">
@@ -861,9 +861,6 @@
                </layout>
               </widget>
              </item>
-             <item row="4" column="0">
-              <widget class="QTextBrowser" name="textBrowser_msg"/>
-             </item>
              <item row="3" column="0">
               <widget class="QFrame" name="frame_7">
                <property name="frameShape">
@@ -1580,6 +1577,13 @@
                  </widget>
                 </item>
                </layout>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QPlainTextEdit" name="plain_log">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
               </widget>
              </item>
             </layout>
